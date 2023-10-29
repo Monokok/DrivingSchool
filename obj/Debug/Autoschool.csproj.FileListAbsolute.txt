@@ -23,3 +23,30 @@ C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструир
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\Autoschool\obj\Debug\Autoschool.csproj.CopyComplete
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\Autoschool\obj\Debug\View\MainWindow.g.cs
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\Autoschool\obj\Debug\View\MainWindow.baml
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\Autoschool.exe.config
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\Autoschool.exe
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\Autoschool.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\MaterialDesignColors.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\MaterialDesignColors.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.csproj.AssemblyReference.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\View\MainWindow.g.cs
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\App.g.cs
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool_MarkupCompile.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool_MarkupCompile.lref
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\App.baml
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\View\MainWindow.baml
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.g.resources
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.Properties.Resources.resources
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.csproj.GenerateResource.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.csproj.CoreCompileInputs.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.csproj.CopyComplete
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.exe
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\View\StudentMainWindow.g.cs
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\View\StudentMainWindow.baml

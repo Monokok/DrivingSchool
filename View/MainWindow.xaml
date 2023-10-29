@@ -9,23 +9,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autoschool.View"
        
-     Title="MainWindow" Height="800" Width="1300" WindowStartupLocation="Manual" Icon="car1.jpg" FontFamily="Calama"
+     Title="MainWindow" Height="800" Width="1300" WindowStartupLocation="Manual" Icon="Logos/car1.jpg" FontFamily="Calama"
              >
     <Window.Background>
         <ImageBrush TileMode="Tile" ImageSource="/View/Backgrounds/backgr1.png" RelativeTransform="{Binding ElementName=window, Mode=OneWay}"/>
     </Window.Background>
 
     <Viewbox  >
-        
-        <Grid Width="Auto" Height="Auto"  >
-
-
-            <Label Content="Автошкола" FontSize="60" FontFamily="Calama" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="331" Background="{DynamicResource PrimaryHueMidForegroundBrush}" Width="203" HorizontalContentAlignment="Center"/>
-            <Label Content="Войти как" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Height="145"/>
-            <Button Content="Студент" FontFamily="Calama" FontSize="18" HorizontalAlignment="Center" Margin="0,226,0,174" Width="90"/>
-            <Button Content="Преподаватель" FontFamily="Calama" FontSize="18" HorizontalAlignment="Center" Margin="0,279,0,121"/>
-            <Button Content="Администратор" FontFamily="Calama" FontSize="18" HorizontalAlignment="Center" Margin="0,329,0,71" Width="90"/>
-
+        <Grid Width="391" Height="527"  >
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Rectangle Fill="#FFF4F4F5" HorizontalAlignment="Center" Height="399" Stroke="Black" VerticalAlignment="Center" Width="395" Grid.RowSpan="6" Opacity="0.85" Grid.Row="1" Grid.ColumnSpan="3" Margin="-4,1,0,52"/>
+            <Label Content="Автошкола" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="-4,36,0,35" Grid.Row="1" VerticalAlignment="Center" Height="Auto" Width="395" FontSize="60" Grid.RowSpan="2" Grid.ColumnSpan="3" Background="{x:Null}"/>
+            <Label Content="Войти как" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="-4,29,0,56" Grid.Row="2" VerticalAlignment="Center" Height="Auto" Width="395" FontSize="48" Grid.RowSpan="2" Grid.ColumnSpan="3" Background="{x:Null}"/>
+            <Button Content="Студент" HorizontalAlignment="Center" VerticalAlignment="Center" Width="255" Grid.ColumnSpan="3" Margin="74,24,62,6" Grid.Row="3" Height="46" FontSize="20"/>
+            <Button Content="Преподаватель" HorizontalAlignment="Center" VerticalAlignment="Center" Width="255" Grid.ColumnSpan="3" Margin="74,10,62,19" Grid.Row="4" Height="46" FontSize="20"/>
+            <Button Content="Администратор" HorizontalAlignment="Center" VerticalAlignment="Center" Width="255" Grid.ColumnSpan="3" Margin="74,0,62,29" Grid.Row="5" Height="46" FontSize="20"/>
 
         </Grid>
 
