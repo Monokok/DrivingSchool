@@ -1,0 +1,33 @@
+﻿<Window x:Name="window" x:Class="Autoschool.View.MainWindow"
+        
+        MinHeight="480"
+        MinWidth="600"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Autoschool.View"
+       
+     Title="MainWindow" Height="800" Width="1300" WindowStartupLocation="Manual" Icon="car1.jpg" FontFamily="Calama"
+             >
+    <Window.Background>
+        <ImageBrush TileMode="Tile" ImageSource="/View/Backgrounds/backgr1.png" RelativeTransform="{Binding ElementName=window, Mode=OneWay}"/>
+    </Window.Background>
+
+    <Viewbox  >
+        
+        <Grid Width="Auto" Height="Auto"  >
+
+
+            <Label Content="Автошкола" FontSize="60" FontFamily="Calama" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Height="331" Background="{DynamicResource PrimaryHueMidForegroundBrush}" Width="203" HorizontalContentAlignment="Center"/>
+            <Label Content="Войти как" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" Height="145"/>
+            <Button Content="Студент" FontFamily="Calama" FontSize="18" HorizontalAlignment="Center" Margin="0,226,0,174" Width="90"/>
+            <Button Content="Преподаватель" FontFamily="Calama" FontSize="18" HorizontalAlignment="Center" Margin="0,279,0,121"/>
+            <Button Content="Администратор" FontFamily="Calama" FontSize="18" HorizontalAlignment="Center" Margin="0,329,0,71" Width="90"/>
+
+
+        </Grid>
+
+    </Viewbox>
+</Window>
