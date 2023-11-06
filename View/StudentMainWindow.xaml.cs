@@ -23,5 +23,7 @@ namespace Autoschool.View
         {
             InitializeComponent();
         }
+
+       
     }
 }
