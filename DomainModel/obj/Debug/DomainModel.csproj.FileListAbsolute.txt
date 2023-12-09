@@ -10,3 +10,15 @@ C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструир
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DomainModel\obj\Debug\DomainModel.csproj.CopyComplete
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DomainModel\obj\Debug\DomainModel.dll
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DomainModel\obj\Debug\DomainModel.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\bin\Debug\DomainModel.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\bin\Debug\DomainModel.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\bin\Debug\DomainModel.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\bin\Debug\EntityFramework.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\bin\Debug\EntityFramework.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainModel.csproj.AssemblyReference.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainModel.csproj.CoreCompileInputs.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainModel.csproj.CopyComplete
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainModel.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainModel.pdb

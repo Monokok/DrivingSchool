@@ -59,10 +59,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Interfaces\Interfaces.csproj">
-      <Project>{A5C4C2F9-2453-4F48-87F4-80DF972E33A4}</Project>
-      <Name>Interfaces</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{f2cfca41-5aa1-47b8-8a12-3dbfd6eb9e90}</Project>
       <Name>DAL</Name>
@@ -70,6 +66,10 @@
     <ProjectReference Include="..\DomainModel\DomainModel.csproj">
       <Project>{28648bdb-fda4-4275-8dea-a4291ef6206b}</Project>
       <Name>DomainModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interfaces\Interfaces.csproj">
+      <Project>{3ea8d4d5-6806-456c-a8f4-74622855a463}</Project>
+      <Name>Interfaces</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

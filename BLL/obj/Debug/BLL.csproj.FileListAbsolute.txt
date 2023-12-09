@@ -19,3 +19,24 @@ C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструир
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\BLL\obj\Debug\BLL.dll
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\BLL\obj\Debug\BLL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\obj\Debug\BLL.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\obj\Debug\BLL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\BLL.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\BLL.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\BLL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\DAL.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\DomainModel.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\Interfaces.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\DAL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\DAL.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\DomainModel.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\DomainModel.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\Interfaces.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\Interfaces.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\BLL\obj\Debug\BLL.csproj.CopyComplete

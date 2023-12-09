@@ -16,3 +16,23 @@ C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструир
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\obj\Debug\DAL.dll
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\obj\Debug\DAL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\obj\Debug\DAL.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\obj\Debug\DAL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\DAL.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\DAL.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\DAL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\DomainModel.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\EntityFramework.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\Interfaces.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\DomainModel.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\DomainModel.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\Interfaces.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\Interfaces.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\EntityFramework.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\obj\Debug\DAL.csproj.CopyComplete

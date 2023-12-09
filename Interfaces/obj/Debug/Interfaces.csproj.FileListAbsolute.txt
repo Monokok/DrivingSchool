@@ -1,0 +1,15 @@
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\Interfaces.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\DomainModel.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\EntityFramework.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\DomainModel.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\DomainModel.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\EntityFramework.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\obj\Debug\Interfaces.pdb

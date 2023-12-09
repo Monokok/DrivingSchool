@@ -48,8 +48,6 @@ C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.csproj.C
 C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.csproj.CopyComplete
 C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.exe
 C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\Autoschool.pdb
-C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\View\StudentMainWindow.g.cs
-C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\obj\Debug\View\StudentMainWindow.baml
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\Autoschool.exe.config
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\Autoschool.exe
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\Autoschool.pdb
@@ -109,3 +107,37 @@ C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструир
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\EntityFramework.xml
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\EntityFramework.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\LiveCharts.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Aero.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Xceed.Wpf.AvalonDock.Themes.Metro.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Xceed.Wpf.AvalonDock.Themes.VS2010.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Xceed.Wpf.Toolkit.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\EntityFramework.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\LiveCharts.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\LiveCharts.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\cs-CZ\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\de\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\es\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\fr\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\hu\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\it\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\ja-JP\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\nl-BE\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\pt-BR\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\ro\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\ru\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\sv\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\zh-Hans\Xceed.Wpf.AvalonDock.resources.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\foo.g.cs
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\AppMainWindow.g.cs
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\TeacherMainWindow.g.cs
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\foo.baml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\AppMainWindow.baml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\TeacherMainWindow.baml
