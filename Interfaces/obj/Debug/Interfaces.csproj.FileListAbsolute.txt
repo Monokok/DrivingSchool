@@ -13,3 +13,20 @@ C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\bin\Debug\EntityFr
 C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
 C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\obj\Debug\Interfaces.dll
 C:\Users\Yeah\Desktop\3-41\Фомина\CourseWork\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\Interfaces.dll.config
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\Interfaces.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\Interfaces.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\DomainModel.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\EntityFramework.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\DomainModel.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\DomainModel.dll.config
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\EntityFramework.xml
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\obj\Debug\Interfaces.csproj.AssemblyReference.cache
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\obj\Debug\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\obj\Debug\Interfaces.csproj.CopyComplete
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\obj\Debug\Interfaces.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\obj\Debug\Interfaces.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\Ninject.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\Ninject.xml

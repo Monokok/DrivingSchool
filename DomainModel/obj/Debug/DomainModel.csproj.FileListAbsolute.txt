@@ -22,3 +22,5 @@ C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainM
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainModel.csproj.CopyComplete
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainModel.dll
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DomainModel\obj\Debug\DomainModel.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DomainModel\bin\Debug\Ninject.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DomainModel\bin\Debug\Ninject.xml

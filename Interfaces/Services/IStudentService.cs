@@ -10,10 +10,14 @@ namespace Interfaces.Services
     public interface IStudentService
     {
         List<studentDTO> GetAllStudents();
+        List<teacherDTO> GetAllTeachers();
         List<lessonDTO> GetAllLessons();
         List<lessonDTO> GetAllMyLessons(int id);
         List<courseDTO> GetAllCourses();
-        
+        List<categoryDTO> GetAllCategories();
+        List<invite_courseDTO> GetAllInvitations();
+        void RegisterForTheCourse(int _student_id, int course_id);
+
         //List<SubReaderBookGenre> GetAllSubscriptions();
         //List<BookGenreNoID> GetAllAvailableBooksForGrid();
         //List<BookDTO> GetAllAvailableBooks();

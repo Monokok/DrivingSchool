@@ -8,7 +8,7 @@ namespace DomainModel
 
     public partial class invite_course
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
         public int student_id { get; set; }

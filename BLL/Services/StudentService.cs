@@ -5,6 +5,7 @@ using Interfaces.Repository;
 using Interfaces.Services;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core.Objects;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,15 +14,38 @@ namespace BLL.Services
 {
     public class StudentService: IStudentService //сервис студента - все связанные с ним ЕГО возможности как пользователя
     {
+        public bool Save()
+        {
+            if (db.Save() > 0) return true;
+            return false;
+        }
         private IDbRepos db;
         public StudentService(IDbRepos repos)
         {
             db = repos;//new DSModel();
         }
 
+        public List<categoryDTO> GetAllCategories()
+        {
+            return db.Categories.GetList().Select(c => new categoryDTO(c)).ToList();
+        }
+
         public List<courseDTO> GetAllCourses()
         {
-            return db.Courses.GetList().Select(i => new courseDTO(i)).ToList();
+            var list = db.Courses.GetList().Select(i => new courseDTO(i)).ToList();
+            foreach (var item in list)
+            {
+                var teacher = db.Teachers.GetList().Find(t => t.id == item.teacher_id); //нашли учителя по id
+                string cat_name = db.Categories.GetList().Find(c => c.id == item.category_id).name;
+                item.teacher_name = teacher.last_name + " " + teacher.first_name + " " + teacher.middle_name;
+                item.category_name = cat_name;
+            }
+            return list;
+        }
+
+        public List<invite_courseDTO> GetAllInvitations()
+        {
+            return db.Invitations.GetList().Select(i => new invite_courseDTO(i)).ToList();
         }
 
         public List<lessonDTO> GetAllLessons()
@@ -39,6 +63,33 @@ namespace BLL.Services
         public List<studentDTO> GetAllStudents()
         {
             return db.Students.GetList().Select(i => new studentDTO(i)).ToList();
+        }
+
+        public List<teacherDTO> GetAllTeachers()
+        {
+            return db.Teachers.GetList().Select(i => new teacherDTO(i)).ToList();
+        }
+
+        public void RegisterForTheCourse(int _student_id, int course_id)
+        {
+            //если студент существует с таким id
+            if (db.Students.GetList().Find(st => st.id == _student_id) != null)
+            {
+                //если действительно курс с таким id существует:
+                if (db.Courses.GetList().Find(cours => cours.id == course_id) != null)
+                {
+                    //находим все регистрации на курсы у студента
+                    var invitations = db.Invitations.GetList().Where(inv => inv.student_id == _student_id).ToList();
+                    foreach (var item in invitations)
+                    {
+                        if (item.group_id == course_id) return;  //проверяем: если студент уже записан на курс - выход
+                    }
+                    //не записан -> создать новый объект в invitations
+                    db.Invitations.Create(new invite_course() { student_id = _student_id, group_id = course_id });
+                    Save();
+                }
+            }
+            return;
         }
 
         //public List<BookDTO> GetAllBooks()

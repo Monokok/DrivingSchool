@@ -17,6 +17,10 @@ namespace DAL.Repository
         private TeacherRepositorySQL TeacherRepository;
         private LessonRepositorySQL LessonRepository;
         private CourseRepositorySQL CourseRepository;
+        private CategoryRepositorySQL CategoryRepository;
+        private invite_courseRepositorySQL InviteRepository;
+
+
 
         //private ReaderRepositorySQL ReaderRepository;
         //private GenreRepositorySQL GenreRepository;
@@ -74,6 +78,26 @@ namespace DAL.Repository
                 if (CourseRepository == null)
                     CourseRepository = new CourseRepositorySQL(db);
                 return CourseRepository;
+            }
+        }
+
+        public IRepository<category> Categories
+        {
+            get
+            {
+                if (CategoryRepository == null)
+                    CategoryRepository = new CategoryRepositorySQL(db);
+                return CategoryRepository;
+            }
+        }
+
+        public IRepository<invite_course> Invitations
+        {
+            get
+            {
+                if (InviteRepository == null)
+                    InviteRepository = new invite_courseRepositorySQL(db);
+                return InviteRepository;
             }
         }
 

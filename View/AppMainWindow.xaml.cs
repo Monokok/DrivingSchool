@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Autoschool.Utils;
+using Autoschool.ViewModel;
+using Ninject;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +25,7 @@ namespace Autoschool.View
         public StudentMainWindow()
         {
             InitializeComponent();
+            DataContext = Injector.Kernel.Get<AppMainViewModel>();
         }
 
        

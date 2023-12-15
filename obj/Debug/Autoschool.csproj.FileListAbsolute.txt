@@ -141,3 +141,17 @@ C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\TeacherMainWin
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\foo.baml
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\AppMainWindow.baml
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\View\TeacherMainWindow.baml
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\BLL.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\Interfaces.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\Ninject.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DomainModel.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\BLL.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\BLL.dll.config
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\Interfaces.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\Interfaces.dll.config
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\Ninject.xml
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DomainModel.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DomainModel.dll.config
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DAL.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DAL.pdb
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DAL.dll.config

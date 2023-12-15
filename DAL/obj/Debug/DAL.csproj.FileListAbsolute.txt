@@ -36,3 +36,7 @@ C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\EntityFramework
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\ru\EntityFramework.resources.dll
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\bin\Debug\Ninject.dll
+C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\bin\Debug\Ninject.xml

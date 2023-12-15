@@ -13,13 +13,18 @@ namespace Interfaces.DTO
         { 
             id = course.id;
             category_id = course.category_id;
-            start_date= course.start_date;
+            start_date = course.start_date;
+            start_date_string = "Дата начала: " + course.start_date.ToString("f");
+            end_time_string = "Дата завершения: " + course.end_time.ToString("f");
             end_time = course.end_time;
             cost = course.cost;
             lecture_hours= course.lecture_hours;
             driving_hours = course.driving_hours;
             teacher_id = course.teacher_id;
             student_count = course.student_count;
+            driving_hours_string = driving_hours + " часов практики";
+            lecture_hours_string = lecture_hours + " часов теории";
+            cost_string = "Цена:" + " " + cost.ToString() + " " + "₽";
         }
 
         public int id { get; set; }
@@ -30,7 +35,11 @@ namespace Interfaces.DTO
 
         public DateTime end_time { get; set; }
 
+        public string start_date_string {  get; set; }
+        public string end_time_string {  get; set; }
+
         public int cost { get; set; }
+        public string cost_string { get; set; }
 
         public int lecture_hours { get; set; }
 
@@ -40,5 +49,10 @@ namespace Interfaces.DTO
 
         public int student_count { get; set; }
 
+        public string teacher_name { get; set;}
+        public string category_name { get; set; }
+
+        public string driving_hours_string { get; set; }
+        public string lecture_hours_string { get; set; }
     }
 }
