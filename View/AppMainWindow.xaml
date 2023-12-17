@@ -8,7 +8,7 @@
         xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
         
-        Title="StudentMainWindow" Height="500" Width="1200"
+        Title="DS" Height="500" Width="1200"
         MinHeight="500"
         MinWidth="1000">
     <!--xmlns:LiveChartsLocal="clr-namespace:WPFSample"
@@ -69,7 +69,10 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
                                 <ColumnDefinition Width="0.05*"/>
                                 <ColumnDefinition  Width="2*"/>
                             </Grid.ColumnDefinitions>
-
+                            <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4"
+                                   TextBlock.FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                Выбор курса для записи:
+                            </Label>
                             <Button
                                 Command="{Binding RegisterForTheCourseCommand}"
                                 Grid.Column="5"
@@ -100,12 +103,16 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
                                     <Label FontSize="16" Content="{Binding selected_courseDataGrid.cost_string}"></Label>
                                     <Label FontSize="16" Content="{Binding selected_courseDataGrid.start_date_string}"></Label>
                                     <Label FontSize="16" Content="{Binding selected_courseDataGrid.end_time_string}"></Label>
+                                    <Label FontSize="16" Content="{Binding selected_courseDataGrid.category_name}"></Label>
+
+
                                 </StackPanel>
                             </Grid>
 
 
 
-                            <DataGrid Grid.ColumnSpan="5"
+                            <DataGrid x:Name="GridForAllAvailableCourses"
+                                Grid.ColumnSpan="5"
                                       ItemsSource="{Binding courses}"
                                       SelectedItem="{Binding selected_courseDataGrid}"
                                       IsReadOnly="True"
@@ -125,6 +132,7 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
                                     <DataGridTextColumn Header="Цена, ₽" Binding="{Binding cost}"/>
                                     <DataGridTextColumn Header="Начало" Binding="{Binding start_date, StringFormat=d}"/>
                                     <DataGridTextColumn Header="Конец" Binding="{Binding end_time, StringFormat=d}"/>
+                                    <DataGridTextColumn Header="Категория" Binding="{Binding category_name}"/>
 
                                 </DataGrid.Columns>
                             </DataGrid>
@@ -164,52 +172,99 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
                                 <ColumnDefinition Width="1*"/>
                                 <ColumnDefinition Width="0.1*"/>
                             </Grid.ColumnDefinitions>
-                            <DataGrid Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="6" >
+                            
+                            <DataGrid Grid.Row="1"
+                                      ItemsSource="{Binding student_lessons}"
+                                      SelectedItem="{Binding selected_student_lessons}"
+                                      Grid.Column="1" Grid.ColumnSpan="4" 
+                                      IsReadOnly="True">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Время" Binding="{Binding Path=Title}" Width="1.5*" />
-                                    <DataGridHyperlinkColumn Header="Инструктор" Binding="{Binding Path=Company}" Width="6*" />
+                                    <DataGridTextColumn Visibility="Collapsed" Header="id" Binding="{Binding id}"/>
+                                    <DataGridTextColumn Header="Дата" Binding="{Binding date, StringFormat=d}"/>
+                                    <DataGridTextColumn Header="Тема" Binding="{Binding topic}"/>
+                                    <DataGridTextColumn Header="Цена" Binding="{Binding cost}"/>
+                                    <DataGridTextColumn Header="Тип" Binding="{Binding status}"/>
+                                    <!--<DataGridTextColumn Header="Время" Binding="{Binding Path=Title}" Width="1.5*" />
+                                    <DataGridHyperlinkColumn Header="Инструктор" Binding="{Binding Path=Company}" Width="6*" />-->
                                 </DataGrid.Columns>
-
                             </DataGrid>
+                            <StackPanel
+                                Grid.Row="1"
+                                Grid.Column="5"
+                                Grid.ColumnSpan="2">
+                                <StackPanel HorizontalAlignment="Center" 
+                                            Orientation="Horizontal">
+                                    <TextBlock HorizontalAlignment="Center" FontSize="20">Дата: </TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" FontSize="20" Text="{Binding selected_student_lessons.date}"></TextBlock>
+                                </StackPanel>
+                                <Button x:Name="ChangeLessonTimeButton" Margin="100, 10, 100, 10">Изменить дату</Button>
+                                <Button x:Name="CancelLessonTimeButton" Margin="100, 10, 100, 10">Отменить занятие</Button>
+
+                            </StackPanel>
                             <StackPanel  VerticalAlignment="Center" Orientation="Vertical" Grid.Row="0" Grid.Column="1">
-                                <xceed:DateTimePicker
-                                    Grid.Column="1"
-                                    Grid.Row="0"
-                                    
-                                    Height="50"
+                                <ComboBox Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                    Grid.Column="3"
                                     Grid.ColumnSpan="1"
-                                    Grid.RowSpan="1">
-                                </xceed:DateTimePicker>
-                                <Separator Opacity="0" Height="3"/>
+                                          Name="ComboboxLessonsCourses"
+                                    ItemsSource="{Binding student_courses}"
+                                          SelectedItem="{Binding selected_student_course}"
+                                    materialDesign:HintAssist.Hint="Выберите свой курс обучения"
+                                          >
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding category_teacher}"></Label>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+                               
+
 
 
                             </StackPanel>
 
-
-                            <ComboBox Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                            <StackPanel 
+                                VerticalAlignment="Center"
+                                Orientation="Horizontal"
+                                Grid.Column="3" Grid.ColumnSpan="1">
+                                
+                                <ComboBox Style="{StaticResource MaterialDesignOutlinedComboBox}"
                                     Grid.Column="3"
                                     Grid.ColumnSpan="1"
                                     materialDesign:ComboBoxAssist.ShowSelectedItem="{Binding ElementName=DisplaySelectedItemCheckBox, Path=IsChecked}">
-                                <ComboBoxItem
-                                    
+                                                                <ComboBoxItem
+        
                                     Content="Выберите преподавателя"
                                     IsSelected="True"/>
-                                <ComboBoxItem Content="Иванов Иван Иванович" />
-                                <ComboBoxItem Content="Романов Роман Романович" />
-                                <ComboBoxItem Content="Борисов Борис Борисович" />
-                            </ComboBox>
+                                    <ComboBoxItem Content="Иванов Иван Иванович" />
+                                    <ComboBoxItem Content="Романов Роман Романович" />
+                                    <ComboBoxItem Content="Борисов Борис Борисович" />
+                                    
+                                </ComboBox>
+                                <Separator Opacity="0" Height="3" Width="5"/>
+                                <xceed:DateTimePicker
+                                    Height="40" Width="130">
+                                </xceed:DateTimePicker>
+                                
+                            </StackPanel>
+                            
                             <StackPanel Grid.Column="5" 
+                                        Grid.ColumnSpan="2"
                                         HorizontalAlignment="Center" 
                                         VerticalAlignment="Center">
+                                
                                 <xceed:Selector >
-                                    За счёт оплаченных занятий
+                                    Занятие от курса
                                 </xceed:Selector>
                                 <StackPanel   Orientation="Horizontal" HorizontalAlignment="Center">
                                     <TextBlock HorizontalAlignment="Center">Доступно:</TextBlock>
                                     <Separator Opacity="0" Width="3"/>
                                     <TextBlock x:Name="CourseHours" HorizontalAlignment="Center">56</TextBlock>
+
                                 </StackPanel>
+                                <Button>Записаться</Button>
                             </StackPanel>
+
+                            
 
                         </Grid>
                         <!--<TextBlock>
@@ -291,6 +346,7 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                                 Grid.Row="1" Grid.Column="2">
                                 <TextBlock FontSize="25" HorizontalAlignment="Center">Курсы студента:</TextBlock>
                                 <DataGrid
+                                    x:Name="DataGridForStudentCourses"
                                     HorizontalAlignment="Center"
                                     ItemsSource="{Binding student_courses}"
                                       IsReadOnly="True"

@@ -155,3 +155,17 @@ C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструир
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DAL.dll
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DAL.pdb
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\bin\Debug\DAL.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\BLL.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\DAL.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Interfaces.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Ninject.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\DomainModel.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\BLL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\BLL.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\DAL.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\DAL.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Interfaces.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Interfaces.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Ninject.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\DomainModel.pdb
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\DomainModel.dll.config

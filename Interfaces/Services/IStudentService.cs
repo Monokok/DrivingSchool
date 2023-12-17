@@ -14,6 +14,9 @@ namespace Interfaces.Services
         List<lessonDTO> GetAllLessons();
         List<lessonDTO> GetAllMyLessons(int id);
         List<courseDTO> GetAllCourses();
+        List<courseDTO> GetStudentCourses(int student_id);
+        List<courseDTO> GetAvailableCourses(int student_id);
+
         List<categoryDTO> GetAllCategories();
         List<invite_courseDTO> GetAllInvitations();
         void RegisterForTheCourse(int _student_id, int course_id);

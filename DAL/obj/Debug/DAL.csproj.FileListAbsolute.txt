@@ -40,3 +40,5 @@ C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструир
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\bin\Debug\Ninject.dll
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\DAL\bin\Debug\Ninject.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\Ninject.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\DAL\bin\Debug\Ninject.xml

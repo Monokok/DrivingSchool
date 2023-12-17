@@ -26,6 +26,7 @@ namespace Interfaces.DTO
         public DateTime date { get; set; }
 
         public string topic { get; set; }
+        public string status { get; set; }
 
         public int type_id { get; set; }
 

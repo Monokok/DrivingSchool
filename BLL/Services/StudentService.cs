@@ -35,10 +35,11 @@ namespace BLL.Services
             var list = db.Courses.GetList().Select(i => new courseDTO(i)).ToList();
             foreach (var item in list)
             {
-                var teacher = db.Teachers.GetList().Find(t => t.id == item.teacher_id); //нашли учителя по id
+                var teacher =  db.Teachers.GetList().Find(t => t.id == item.teacher_id); //нашли учителя по id
                 string cat_name = db.Categories.GetList().Find(c => c.id == item.category_id).name;
                 item.teacher_name = teacher.last_name + " " + teacher.first_name + " " + teacher.middle_name;
                 item.category_name = cat_name;
+                item.category_teacher = "Категория " + cat_name + " " + teacher.last_name + " " + teacher.first_name + " " + teacher.middle_name;
             }
             return list;
         }
@@ -86,10 +87,112 @@ namespace BLL.Services
                     }
                     //не записан -> создать новый объект в invitations
                     db.Invitations.Create(new invite_course() { student_id = _student_id, group_id = course_id });
+
+                    var crs = db.Courses.GetList().Find(c => c.id == course_id);
+                    DateTime startDate = crs.start_date;
+                    while (startDate <= crs.end_time)//цикл до тех пор, пока не кончится время курса
+                    {
+                        if (startDate.DayOfWeek == DayOfWeek.Monday ||
+                            startDate.DayOfWeek == DayOfWeek.Wednesday ||
+                            startDate.DayOfWeek == DayOfWeek.Friday
+                            )
+                        {//проверяем понедельник\среду\пятницу
+                            Random r = new Random();
+                            db.Lessons.Create(new lesson
+                            {
+                                date = startDate,
+                                topic = "ПДД тема: " + r.Next(1, 50),
+                                type_id = 1, //1 = лекция
+                                teacher_id = crs.teacher_id,
+                                student_id = _student_id,
+                                payment_type_id = 0, //0 = оплачено
+                                cost = 0.ToString(),
+                                status = "Назначено",
+                            });
+                            //break;
+                        }
+                        startDate = startDate.AddDays(1);//идём по циклу
+                    }
+
+
                     Save();
                 }
             }
             return;
+        }
+
+        public List<courseDTO> GetStudentCourses(int student_id)
+        {
+            //если студент существует с таким id
+            if (db.Students.GetList().Find(st => st.id == student_id) != null)
+            {
+                List<course> courses = new List<course>();
+                var invitations = db.Invitations.GetList().Where(inv => inv.student_id == student_id);
+               
+                foreach (var item in invitations)
+                {
+                    courses.Add(db.Courses.GetList().Find(cours => cours.id == item.group_id)
+                        );
+                }
+
+                List<courseDTO> res = courses.Select(c => new courseDTO(c)).ToList();
+
+                foreach (var item in res)
+                {
+                    var teacher = db.Teachers.GetList().Find(t => t.id == item.teacher_id); //нашли учителя по id
+                    string cat_name = db.Categories.GetList().Find(c => c.id == item.category_id).name;
+                    item.teacher_name = teacher.last_name + " " + teacher.first_name + " " + teacher.middle_name;
+                    item.category_name = cat_name;
+                    item.category_teacher = "Категория " + cat_name + " " + teacher.last_name + " " + teacher.first_name + " " + teacher.middle_name;
+
+                }
+                return res;
+            }
+            else return new List<courseDTO>();
+        }
+
+        public List<courseDTO> GetAvailableCourses(int student_id)
+        {
+            //если студент существует с таким id
+            if (db.Students.GetList().Find(st => st.id == student_id) != null)
+            {
+
+                List<course> courses = new List<course>();
+                var invitations = db.Invitations.GetList().Where(inv => inv.student_id == student_id);
+
+                foreach (var item in invitations)
+                {
+                    courses.Add(db.Courses.GetList().Find(cours => cours.id == item.group_id)
+                        );
+                }
+                var list = db.Courses.GetList().Except(courses).ToList();
+                List<courseDTO> res = list.Select(c => new courseDTO(c)).ToList();
+                foreach (var item in res)
+                {
+                    var teacher = db.Teachers.GetList().Find(t => t.id == item.teacher_id); //нашли учителя по id
+                    string cat_name = db.Categories.GetList().Find(c => c.id == item.category_id).name;
+                    item.teacher_name = teacher.last_name + " " + teacher.first_name + " " + teacher.middle_name;
+                    item.category_name = cat_name;
+                    item.category_teacher = "Категория " + cat_name + " " + teacher.last_name + " " + teacher.first_name + " " + teacher.middle_name;
+
+                }
+                return res;
+
+                //List<courseDTO> stcrs = courses.Select(c => new courseDTO(c)).ToList();
+
+
+                //List<courseDTO> allcrs = db.Courses.GetList().Select(i => new courseDTO(i)).ToList(); //нашли все курсы
+                //allcrs.RemoveAll(stcrs.Contains);//удалили все курсы студента изи всех курсов = все ещё не записанные курсы
+                //foreach (var item in allcrs)
+                //{
+                //    var teacher = db.Teachers.GetList().Find(t => t.id == item.teacher_id); //нашли учителя по id
+                //    string cat_name = db.Categories.GetList().Find(c => c.id == item.category_id).name;
+                //    item.teacher_name = teacher.last_name + " " + teacher.first_name + " " + teacher.middle_name;
+                //    item.category_name = cat_name;
+                //}
+                //return allcrs;
+            }
+            else return new List<courseDTO>();
         }
 
         //public List<BookDTO> GetAllBooks()

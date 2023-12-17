@@ -25,8 +25,9 @@ namespace Interfaces.DTO
             driving_hours_string = driving_hours + " часов практики";
             lecture_hours_string = lecture_hours + " часов теории";
             cost_string = "Цена:" + " " + cost.ToString() + " " + "₽";
+            
         }
-
+        public string category_teacher {  get; set; }
         public int id { get; set; }
 
         public int category_id { get; set; }

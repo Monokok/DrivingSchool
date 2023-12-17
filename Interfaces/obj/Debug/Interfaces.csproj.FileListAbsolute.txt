@@ -30,3 +30,5 @@ C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструир
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\obj\Debug\Interfaces.pdb
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\Ninject.dll
 C:\Users\monok\OneDrive\Рабочий стол\ИГЭУ\3-41\Конструирование ПО Фомина О. В\CourseWork\Interfaces\bin\Debug\Ninject.xml
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\Interfaces\bin\Debug\Ninject.dll
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\Interfaces\bin\Debug\Ninject.xml

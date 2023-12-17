@@ -9,7 +9,7 @@ namespace DomainModel
     [Table("lesson")]
     public partial class lesson
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int id { get; set; }
 
         public DateTime date { get; set; }
@@ -36,5 +36,9 @@ namespace DomainModel
         public virtual student student { get; set; }
 
         public virtual teacher teacher { get; set; }
+
+        [Required]
+        [StringLength(10)]
+        public string status { get; set; }
     }
 }
