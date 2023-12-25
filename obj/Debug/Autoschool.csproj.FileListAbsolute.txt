@@ -169,3 +169,4 @@ C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Interfaces.dll.conf
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\Ninject.xml
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\DomainModel.pdb
 C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\bin\Debug\DomainModel.dll.config
+C:\Users\Yeah\Desktop\3-41\Фомина\Coursework\obj\Debug\GeneratedInternalTypeHelper.g.cs

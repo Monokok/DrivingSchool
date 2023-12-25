@@ -59,6 +59,8 @@
     <Compile Include="DSModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\CategoryRepositorySQL.cs" />
+    <Compile Include="Repository\carRepositorySQL.cs" />
+    <Compile Include="Repository\lesson_typeRepositorySQL.cs" />
     <Compile Include="Repository\CourseRepositorySQL.cs" />
     <Compile Include="Repository\DbReposSQL.cs" />
     <Compile Include="Repository\invite_courseRepositorySQL.cs" />

@@ -12,7 +12,7 @@ namespace DomainModel
         {
         }
 
-        public virtual DbSet<car> car { get; set; }
+        public virtual DbSet<car> cars { get; set; }
         public virtual DbSet<category> category { get; set; }
         public virtual DbSet<course> course { get; set; }
         public virtual DbSet<invite_course> invite_course { get; set; }

@@ -6,11 +6,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Autoschool.View"
         xmlns:xceed="http://schemas.xceed.com/wpf/xaml/toolkit"
+        xmlns:utils="clr-namespace:Autoschool.ViewModel"
         mc:Ignorable="d"
+        Icon="\View\Logos\car1.jpg"
         
-        Title="DS" Height="500" Width="1200"
-        MinHeight="500"
-        MinWidth="1000">
+        Title="DS" Height="800" Width="1800"
+        MinHeight="800"
+        MinWidth="1390">
+    <Window.Resources>
+        <utils:DateConverter x:Key="dateConverter"></utils:DateConverter>
+
+    </Window.Resources>
     <!--xmlns:LiveChartsLocal="clr-namespace:WPFSample"
 xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCore.SkiaSharpView.WPF"-->
     <!--<Window.DataContext>
@@ -70,10 +76,12 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
                                 <ColumnDefinition  Width="2*"/>
                             </Grid.ColumnDefinitions>
                             <Label Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="4"
-                                   TextBlock.FontSize="24" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                   TextBlock.FontSize="35" VerticalAlignment="Center" HorizontalAlignment="Center">
                                 Выбор курса для записи:
                             </Label>
                             <Button
+                                FontSize="25"
+                                Height="50"
                                 Command="{Binding RegisterForTheCourseCommand}"
                                 Grid.Column="5"
                                 Grid.Row="1"
@@ -89,21 +97,21 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
                                     <RowDefinition Height="1*" />
                                     <RowDefinition Height="1*" />
 
-                            </Grid.RowDefinitions>
+                                </Grid.RowDefinitions>
 
-                            <Image Grid.Column="4"
+                                <Image Grid.Column="4"
                                     Source="/View/Backgrounds/backgr3.png" Stretch="Fill"
                                    />
 
 
                                 <StackPanel Grid.Row="1" Grid.ColumnSpan="1" Grid.RowSpan="1">
-                                    <Label FontSize="16" Content="{Binding selected_courseDataGrid.teacher_name}"></Label>
-                                    <Label FontSize="16" Content="{Binding selected_courseDataGrid.driving_hours_string}"></Label>
-                                    <Label FontSize="16" Content="{Binding selected_courseDataGrid.lecture_hours_string}"></Label>
-                                    <Label FontSize="16" Content="{Binding selected_courseDataGrid.cost_string}"></Label>
-                                    <Label FontSize="16" Content="{Binding selected_courseDataGrid.start_date_string}"></Label>
-                                    <Label FontSize="16" Content="{Binding selected_courseDataGrid.end_time_string}"></Label>
-                                    <Label FontSize="16" Content="{Binding selected_courseDataGrid.category_name}"></Label>
+                                    <Label FontSize="25" Content="{Binding selected_courseDataGrid.teacher_name}"></Label>
+                                    <Label FontSize="25" Content="{Binding selected_courseDataGrid.driving_hours_string}"></Label>
+                                    <Label FontSize="25" Content="{Binding selected_courseDataGrid.lecture_hours_string}"></Label>
+                                    <Label FontSize="25" Content="{Binding selected_courseDataGrid.cost_string}"></Label>
+                                    <Label FontSize="25" Content="{Binding selected_courseDataGrid.start_date_string}"></Label>
+                                    <Label FontSize="25" Content="{Binding selected_courseDataGrid.end_time_string}"></Label>
+                                    <Label FontSize="25" Content="{Binding selected_courseDataGrid.category_fullname}"></Label>
 
 
                                 </StackPanel>
@@ -112,6 +120,7 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
 
 
                             <DataGrid x:Name="GridForAllAvailableCourses"
+                                      FontSize="20"
                                 Grid.ColumnSpan="5"
                                       ItemsSource="{Binding courses}"
                                       SelectedItem="{Binding selected_courseDataGrid}"
@@ -127,7 +136,7 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
                                       
                         >
                                 <DataGrid.Columns>
-                                    
+
                                     <DataGridTextColumn Visibility="Collapsed" Header="id" Binding="{Binding id}"/>
                                     <DataGridTextColumn Header="Цена, ₽" Binding="{Binding cost}"/>
                                     <DataGridTextColumn Header="Начало" Binding="{Binding start_date, StringFormat=d}"/>
@@ -164,44 +173,89 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
                                 <RowDefinition Height="0.5*"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="0.1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="0.1*"/>
-                                <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="0.1*"/>
+                                <ColumnDefinition Width="38*"/>
+                                <ColumnDefinition Width="379*"/>
+                                <ColumnDefinition Width="38*"/>
+                                <ColumnDefinition Width="379*"/>
+                                <ColumnDefinition Width="38*"/>
+                                <ColumnDefinition Width="379*"/>
+                                <ColumnDefinition Width="38*"/>
+                                <ColumnDefinition Width="257*"/>
+                                <ColumnDefinition Width="123*"/>
+                                <ColumnDefinition Width="38*"/>
                             </Grid.ColumnDefinitions>
-                            
-                            <DataGrid Grid.Row="1"
+
+                            <DataGrid
                                       ItemsSource="{Binding student_lessons}"
                                       SelectedItem="{Binding selected_student_lessons}"
-                                      Grid.Column="1" Grid.ColumnSpan="4" 
-                                      IsReadOnly="True">
+                                      Grid.Column="1" Grid.ColumnSpan="6" 
+                                      AutoGenerateColumns="False"
+                                      FontSize="18"
+                                      IsReadOnly="True" Margin="0,210,38,105" Grid.RowSpan="3">
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Visibility="Collapsed" Header="id" Binding="{Binding id}"/>
-                                    <DataGridTextColumn Header="Дата" Binding="{Binding date, StringFormat=d}"/>
+                                    <DataGridTextColumn Header="Время" Binding="{Binding date ,Converter={StaticResource dateConverter}}"/>
                                     <DataGridTextColumn Header="Тема" Binding="{Binding topic}"/>
                                     <DataGridTextColumn Header="Цена" Binding="{Binding cost}"/>
-                                    <DataGridTextColumn Header="Тип" Binding="{Binding status}"/>
+                                    <DataGridTextColumn Header="Статус" Binding="{Binding status}"/>
+                                    <DataGridTextColumn Header="Тип" Binding="{Binding lesson_type}"/>
+                                    <DataGridTextColumn Header="ТС" Binding="{Binding car_name}"/>
+                                    <DataGridTextColumn Header="Оплата" Binding="{Binding payment_status}"/>
+
                                     <!--<DataGridTextColumn Header="Время" Binding="{Binding Path=Title}" Width="1.5*" />
                                     <DataGridHyperlinkColumn Header="Инструктор" Binding="{Binding Path=Company}" Width="6*" />-->
                                 </DataGrid.Columns>
                             </DataGrid>
                             <StackPanel
+                                VerticalAlignment="Center"
                                 Grid.Row="1"
-                                Grid.Column="5"
-                                Grid.ColumnSpan="2">
+                                Grid.Column="6"
+                                Grid.ColumnSpan="4">
+                                <TextBlock HorizontalAlignment="Center" FontSize="24">Подробности занятия:</TextBlock>
+
                                 <StackPanel HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"
                                             Orientation="Horizontal">
-                                    <TextBlock HorizontalAlignment="Center" FontSize="20">Дата: </TextBlock>
-                                    <TextBlock HorizontalAlignment="Center" FontSize="20" Text="{Binding selected_student_lessons.date}"></TextBlock>
+
+                                    <TextBlock HorizontalAlignment="Center" FontSize="22">Дата:</TextBlock>
+                                    <Label FontSize="22" Content="{Binding selected_student_lessons.date, Converter={StaticResource dateConverter}}"></Label>
                                 </StackPanel>
-                                <Button x:Name="ChangeLessonTimeButton" Margin="100, 10, 100, 10">Изменить дату</Button>
-                                <Button x:Name="CancelLessonTimeButton" Margin="100, 10, 100, 10">Отменить занятие</Button>
+                                <!--<StackPanel HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+
+                                    <TextBlock HorizontalAlignment="Center" FontSize="15">Время:</TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" FontSize="15" Text="{Binding selected_student_lessons.date, StringFormat=t}"></TextBlock>
+
+                                </StackPanel>-->
+                                <StackPanel HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+
+                                    <TextBlock HorizontalAlignment="Center" FontSize="22">Преподаватель:</TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" FontSize="22" Text="{Binding selected_student_lessons.teacher_name}"></TextBlock>
+
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Center" 
+                                        VerticalAlignment="Center"
+                                        Orientation="Horizontal">
+
+                                    <TextBlock HorizontalAlignment="Center" FontSize="22">Номер для связи:</TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" FontSize="22" Text="{Binding selected_student_lessons.tnumber}"></TextBlock>
+
+                                </StackPanel>
+
+                                <Button VerticalAlignment="Center" x:Name="CancelLessonTimeButton" Margin="100, 10, 100, 10"
+                                         Command="{Binding CancelTheLessonCommand}"
+                                        IsEnabled="{Binding lessonSignUp}"
+                                        FontSize="25"
+                                        Height="50"
+                                        >
+
+                                    Отменить занятие</Button>
 
                             </StackPanel>
-                            <StackPanel  VerticalAlignment="Center" Orientation="Vertical" Grid.Row="0" Grid.Column="1">
+                            <!--<StackPanel  VerticalAlignment="Center" Orientation="Vertical" Grid.Row="0" Grid.Column="1">
                                 <ComboBox Style="{StaticResource MaterialDesignOutlinedComboBox}"
                                     Grid.Column="3"
                                     Grid.ColumnSpan="1"
@@ -220,51 +274,116 @@ xmlns:lvc="clr-namespace:LiveChartsCore.SkiaSharpView.WPF;assembly=LiveChartsCor
 
 
 
+                            </StackPanel>-->
+                            <StackPanel Grid.Column="1" VerticalAlignment="Center">
+                                <Label 
+                                    HorizontalAlignment="Left"
+                                    FontSize="20">Выберите преподавателя для записи на занятие:</Label>
+                                <ComboBox Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                Grid.Column="1"
+                                Grid.ColumnSpan="1"
+                                    ItemsSource="{Binding teachers}"
+                                          SelectedItem="{Binding selected_teacher}"
+                                          
+                                          >
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding name}"></Label>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+
                             </StackPanel>
 
-                            <StackPanel 
-                                VerticalAlignment="Center"
-                                Orientation="Horizontal"
-                                Grid.Column="3" Grid.ColumnSpan="1">
-                                
-                                <ComboBox Style="{StaticResource MaterialDesignOutlinedComboBox}"
-                                    Grid.Column="3"
-                                    Grid.ColumnSpan="1"
-                                    materialDesign:ComboBoxAssist.ShowSelectedItem="{Binding ElementName=DisplaySelectedItemCheckBox, Path=IsChecked}">
-                                                                <ComboBoxItem
-        
-                                    Content="Выберите преподавателя"
-                                    IsSelected="True"/>
-                                    <ComboBoxItem Content="Иванов Иван Иванович" />
-                                    <ComboBoxItem Content="Романов Роман Романович" />
-                                    <ComboBoxItem Content="Борисов Борис Борисович" />
-                                    
-                                </ComboBox>
+                            <StackPanel Grid.Column="2" VerticalAlignment="Center" Grid.ColumnSpan="3" Margin="38,0,37,0">
+                                <Label 
+                                    HorizontalAlignment="Left"
+                                    FontSize="20">Выберите дату записи на занятие:</Label>
                                 <Separator Opacity="0" Height="3" Width="5"/>
-                                <xceed:DateTimePicker
-                                    Height="40" Width="130">
-                                </xceed:DateTimePicker>
-                                
+                                <xceed:DateTimePickerBase Grid.Column="3"
+                                                      Format="LongDate"
+                                                      DisplayDefaultValueOnEmptyText="True"
+                                                      Name="Picker"
+                                                      Height="50" Width="360"
+                                                      Value="{Binding selected_monthday}"
+                                                      >
+                                </xceed:DateTimePickerBase>
+                                <Label
+                                    FontSize="20"
+                                    >Выберите доступное время занятия</Label>
+                                <ComboBox Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="1"
+                                        ItemsSource="{Binding times}"
+                                              SelectedItem="{Binding selected_hour}">
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding TimeOfDay}"></Label>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
                             </StackPanel>
-                            
-                            <StackPanel Grid.Column="5" 
+
+                            <StackPanel Grid.Column="4" VerticalAlignment="Center" Grid.ColumnSpan="3" Margin="37,0,38,0">
+                                <Label 
+                                        HorizontalAlignment="Left"
+                                        FontSize="20">Выберите ТС для занятия:</Label>
+
+                                <ComboBox Style="{StaticResource MaterialDesignOutlinedComboBox}"
+                                    Grid.Column="1"
+                                    Grid.ColumnSpan="1"
+                                        ItemsSource="{Binding selected_teacher_cars}"
+                                              SelectedItem="{Binding selected_car}"
+              
+              >
+                                    <ComboBox.ItemTemplate>
+                                        <DataTemplate>
+                                            <Label Content="{Binding full_car_name}"></Label>
+                                        </DataTemplate>
+                                    </ComboBox.ItemTemplate>
+                                </ComboBox>
+
+                            </StackPanel>
+
+
+
+
+                            <StackPanel Grid.Column="7" 
                                         Grid.ColumnSpan="2"
-                                        HorizontalAlignment="Center" 
-                                        VerticalAlignment="Center">
-                                
-                                <xceed:Selector >
-                                    Занятие от курса
-                                </xceed:Selector>
+                                        HorizontalAlignment="Left" 
+                                        VerticalAlignment="Center" Margin="20,0,0,0">
+                                <Label Visibility="Hidden" Content="{Binding selected_paid_hours_flag}"></Label>
+                                <CheckBox
+                                    FontSize="20"
+                                      IsChecked="{Binding Path=selected_paid_hours_flag, Mode=TwoWay}"
+                                                 
+                                     
+                                                >
+                                    За счёт оплаченных занятий курса
+                                </CheckBox>
+
                                 <StackPanel   Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <TextBlock HorizontalAlignment="Center">Доступно:</TextBlock>
+                                    <TextBlock 
+                                        FontSize="20"
+                                        HorizontalAlignment="Center">Доступно:</TextBlock>
                                     <Separator Opacity="0" Width="3"/>
-                                    <TextBlock x:Name="CourseHours" HorizontalAlignment="Center">56</TextBlock>
+                                    <TextBlock 
+                                        FontSize="20"
+                                        x:Name="CourseHours"
+                                        HorizontalAlignment="Center"
+                                        Text="{Binding student_paid_hours}"
+                                               ></TextBlock>
+
 
                                 </StackPanel>
-                                <Button>Записаться</Button>
+                                <Button x:Name="SignUpForTheLesson"
+                                        Command="{Binding RegisterForTheLessonCommand}"
+                                        FontSize="25" 
+                                        Height="50"
+                                    >Записаться</Button>
                             </StackPanel>
 
-                            
+
 
                         </Grid>
                         <!--<TextBlock>
@@ -308,7 +427,7 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="132*"/>
                                 <ColumnDefinition Width="222*"/>
-                                <ColumnDefinition Width="353*"/>
+                                <ColumnDefinition Width="500*"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel  Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,36,0,36" Grid.RowSpan="3">
                                 <ComboBox x:Name="StudentsComboBox" Grid.ColumnSpan="3"
@@ -333,19 +452,25 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Grid.RowSpan="1">
                                     <TextBlock FontSize="25"  Text="Заплачено за курсы: "></TextBlock>
-                                    <TextBlock FontSize="25"  Text="{Binding selected_student.name}">
+                                    <TextBlock FontSize="25"  Text="{Binding HowManyMoneyStudentSpent}">
                                     </TextBlock>
+                                    <TextBlock FontSize="25"  Text=" ₽"></TextBlock>
+
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Grid.RowSpan="1">
-                                    <TextBlock FontSize="25"  Text="Заплачено за занятия: "></TextBlock>
-                                    <TextBlock FontSize="25"  Text="{Binding selected_student.name}">
+                                    <TextBlock FontSize="25"  Text="Занятий со статусом неоплаченных: "></TextBlock>
+                                    <TextBlock FontSize="25"  Text="{Binding HowManyLessonNoPay}">
                                     </TextBlock>
+                                    <TextBlock FontSize="25"  Text=" ₽"></TextBlock>
+
                                 </StackPanel>
+
                             </StackPanel>
                             <StackPanel
                                 Grid.Row="1" Grid.Column="2">
                                 <TextBlock FontSize="25" HorizontalAlignment="Center">Курсы студента:</TextBlock>
                                 <DataGrid
+                                    FontSize="25"
                                     x:Name="DataGridForStudentCourses"
                                     HorizontalAlignment="Center"
                                     ItemsSource="{Binding student_courses}"
@@ -368,7 +493,7 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                                     </DataGrid.Columns>
                                 </DataGrid>
                             </StackPanel>
-                            
+
 
                         </Grid>
                     </TabItem>
@@ -393,26 +518,97 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                         </TabItem.Header>
                         <Grid>
                             <Grid.RowDefinitions >
-                                <RowDefinition Height="0.2*"/>
+
                                 <RowDefinition Height="1*"/>
                                 <RowDefinition Height="5*"/>
                                 <RowDefinition Height="0.5*"/>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.05*"/>
+
                                 <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="2*"/>
+                                <ColumnDefinition  Width="0.5*"/>
+
                             </Grid.ColumnDefinitions>
                             <!--внутренность 1й вкладки-->
+                            <Label 
+                                VerticalAlignment="Center"
+                                FontSize="37">
+                                Предстоящие занятия:</Label>
+                            <ComboBox x:Name="TeacherComboBox" 
+                                      Grid.ColumnSpan="1"
+                                      Grid.Column="1"
+                                      Grid.Row="0"
+                                      HorizontalAlignment="Center"
+                                      FontSize="30" 
+                                      ItemsSource="{Binding AllTeachers}" SelectedItem="{Binding authorized_teacher}">
+                                <ComboBox.ItemTemplate>
+                                    <DataTemplate>
+                                        <Label Content="{Binding name}"></Label>
+                                    </DataTemplate>
+                                </ComboBox.ItemTemplate>
+                            </ComboBox>
+
+
+                            <DataGrid Grid.Row="1" Grid.RowSpan="1"
+                              Grid.Column="0" Grid.ColumnSpan="1"         
+                              ItemsSource="{Binding teachers_lessons}"
+                              SelectedItem="{Binding selected_teacher_lessons}"
+                              FontSize="20"
+                              AutoGenerateColumns="False"
+          
+                              IsReadOnly="True">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Visibility="Collapsed" Header="id" Binding="{Binding id}"/>
+                                    <DataGridTextColumn Header="Время" Binding="{Binding date ,Converter={StaticResource dateConverter}}"/>
+                                    <DataGridTextColumn Header="Тема" Binding="{Binding topic}"/>
+                                    <DataGridTextColumn Header="Цена" Binding="{Binding cost}"/>
+                                    <DataGridTextColumn Header="Статус" Binding="{Binding status}"/>
+                                    <DataGridTextColumn Header="Тип" Binding="{Binding lesson_type}"/>
+                                    <DataGridTextColumn Header="ТС" Binding="{Binding car_name}"/>
+                                    <DataGridTextColumn Header="Оплата" Binding="{Binding payment_status}"/>
+                                    <DataGridTextColumn Header="ФИО" Binding="{Binding student_name}"/>
+
+                                    <!--<DataGridTextColumn Header="Время" Binding="{Binding Path=Title}" Width="1.5*" />
+        <DataGridHyperlinkColumn Header="Инструктор" Binding="{Binding Path=Company}" Width="6*" />-->
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <StackPanel
+                                VerticalAlignment="Center"
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                
+                                Grid.ColumnSpan="3">
+                                <TextBlock HorizontalAlignment="Center" FontSize="20">Подробности занятия:</TextBlock>
+                                <StackPanel HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center" 
+                                            Orientation="Horizontal">
+                                    <TextBlock HorizontalAlignment="Center" FontSize="20">Дата:</TextBlock>
+                                    <Label FontSize="20" Content="{Binding selected_teacher_lessons.date, Converter={StaticResource dateConverter}}"></Label>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock FontSize="20" HorizontalAlignment="Center" >Обучающийся:</TextBlock>
+                                    <TextBlock FontSize="20" HorizontalAlignment="Center" Text="{Binding selected_teacher_lessons.student_name}"></TextBlock>
+                                </StackPanel>
+                                <StackPanel HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center" Orientation="Horizontal">
+                                    <TextBlock HorizontalAlignment="Center" FontSize="20">ТС:</TextBlock>
+                                    <TextBlock HorizontalAlignment="Center" FontSize="20" Text="{Binding selected_teacher_lessons.car_name}"></TextBlock>
+                                </StackPanel>
+                                <Button 
+                                    FontSize="20"
+                                    Height="50"
+                                    VerticalAlignment="Center" x:Name="CancelLessonTimeButtonTeacher" Margin="100, 10, 100, 10"
+                                        Command="{Binding CancelTeacherTheLessonCommand}"
+                                        IsEnabled="{Binding TeacherlessonSignUp}">
+                                    Отменить занятие</Button>
+                            </StackPanel>
+
                         </Grid>
                     </TabItem>
 
-                    <TabItem Width="auto" Height="100">
+                    <!--<TabItem Width="auto" Height="100">
                         <TabItem.Header>
                             <StackPanel Width="auto" Height="auto">
                                 <materialDesign:PackIcon 
@@ -441,7 +637,7 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                                 <ColumnDefinition  Width="2*"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
-                    </TabItem>
+                    </TabItem>-->
 
                     <TabItem Width="auto" Height="100">
                         <TabItem.Header>
@@ -456,21 +652,94 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                         </TabItem.Header>
                         <Grid>
                             <Grid.RowDefinitions >
-                                <RowDefinition Height="0.2*"/>
-                                <RowDefinition Height="1*"/>
-                                <RowDefinition Height="5*"/>
-                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="0.5*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.05*"/>
                                 <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="2*"/>
+                                <ColumnDefinition Width="0.5*"/>
                             </Grid.ColumnDefinitions>
+                            <StackPanel
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                >
+                                <Label FontSize="35">Укажите время начала периода для статистики</Label>
+                                <DatePicker SelectedDate="{Binding teacher_first_selected_date}"></DatePicker>
+                                <Label FontSize="35">Укажите время конца периода для статистики</Label>
+                                <DatePicker  SelectedDate="{Binding teacher_second_selected_date}"></DatePicker>
+                                <Button 
+                                    Command="{Binding Teacher_reportCommand}"
+                                    Grid.Column="0"
+                                        Grid.Row="0"
+                                        Margin="20, 5,20, 5"
+                                        Height="50"
+                                        FontSize=" 30"
+                                        >Показать статистику</Button>
+                            </StackPanel>
+                            <DataGrid Grid.Row="1" Grid.RowSpan="1"
+                                  Grid.Column="0" Grid.ColumnSpan="1"         
+                                  ItemsSource="{Binding teacher_report_lessons}"
+                      
+                                  AutoGenerateColumns="False"
+                                      FontSize="25"
+                                  IsReadOnly="True">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Visibility="Collapsed" Header="id" Binding="{Binding id}"/>
+                                    <DataGridTextColumn Header="Время" Binding="{Binding date ,Converter={StaticResource dateConverter}}"/>
+                                    <DataGridTextColumn Header="Тема" Binding="{Binding topic}"/>
+                                    <DataGridTextColumn Header="Цена" Binding="{Binding cost}"/>
+                                    <DataGridTextColumn Header="Статус" Binding="{Binding status}"/>
+                                    <!--<DataGridTextColumn Header="Тип" Binding="{Binding lesson_type}"/>-->
+                                    <DataGridTextColumn Header="ТС" Binding="{Binding car_name}"/>
+                                    <DataGridTextColumn Header="Оплата" Binding="{Binding payment_status}"/>
+
+                                    <!--<DataGridTextColumn Header="Время" Binding="{Binding Path=Title}" Width="1.5*" />
+<DataGridHyperlinkColumn Header="Инструктор" Binding="{Binding Path=Company}" Width="6*" />-->
+                                </DataGrid.Columns>
+                            </DataGrid>
+                            <StackPanel Grid.Row="0"
+                                        Grid.Column="1"
+                                        Grid.RowSpan="2"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        >
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="30">Всего занятий проведено:</Label>
+                                    <Label FontSize="30" Content="{Binding lessonsCounter}"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="27">Общая выручка:</Label>
+                                    <Label FontSize="27" Content="{Binding lessonsCost}"></Label>
+                                    <Label FontSize="27">₽</Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="25">Выручка автошколы:</Label>
+                                    <Label FontSize="25" Content="{Binding MoneyToSchool}"></Label>
+                                    <Label FontSize="25">₽</Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="27">Выручка за вычетом топлива:</Label>
+                                    <Label FontSize="27" Content="{Binding lessonsCostBenz}"></Label>
+                                    <Label FontSize="27">₽</Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="25">Количество лекций:</Label>
+                                    <Label FontSize="25" Content="{Binding lessonsLectureCounter}"></Label>
+                                    <Label FontSize="25"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="25">Количество занятий вождения:</Label>
+                                    <Label FontSize="25" Content="{Binding lessonsDrivingCounter}"></Label>
+                                    <Label FontSize="25"></Label>
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal">
+                                    <Label FontSize="25">Всего студентов:</Label>
+                                    <Label FontSize="25" Content="{Binding lessonsStudentsCounter}"></Label>
+                                    <Label FontSize="25"></Label>
+                                </StackPanel>
+
+
+                            </StackPanel>
                         </Grid>
                     </TabItem>
                 </TabControl>
@@ -492,25 +761,197 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                         </TabItem.Header>
                         <Grid>
                             <Grid.RowDefinitions >
-                                <RowDefinition Height="0.2*"/>
-                                <RowDefinition Height="1*"/>
-                                <RowDefinition Height="5*"/>
-                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="1*"></RowDefinition>
+                                <RowDefinition Height="0.2*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
+                                <RowDefinition Height="1*"></RowDefinition>
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="0.05*"/>
                                 <ColumnDefinition Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="1*"/>
-                                <ColumnDefinition Width="0.05*"/>
-                                <ColumnDefinition  Width="2*"/>
+                                <ColumnDefinition Width="0.01*"/>
+                                <ColumnDefinition Width="0.002*"/>
+                                <ColumnDefinition Width="0.01*"/>
+                                <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
+                            <StackPanel
+                                Grid.Row="0"
+                                Grid.Column="0"
+                                >
+                                <Label FontSize="35">Укажите время начала периода для статистики</Label>
+                                <DatePicker SelectedDate="{Binding AdminFirstTime}"></DatePicker>
+                                <Label FontSize="35">Укажите время конца периода для статистики</Label>
+                                <DatePicker  SelectedDate="{Binding AdminSecondTime}"></DatePicker>
+                                <Button 
+                                    Command="{Binding Admin_reportCommand}"
+                                    Grid.Column="0"
+                                        Grid.Row="0"
+                                        Margin="20, 5,20, 5"
+                                        Height="50"
+                                        FontSize=" 30"
+                                        >Показать статистику</Button>
+                            </StackPanel>
+
+                            <Border
+                                Grid.Row="0"
+                                Grid.Column="2"
+                                Grid.RowSpan="4"
+                                Background="#D1C4E9"
+                                >
+
+                            </Border>
+                            <Label
+                                Grid.Column="0"
+                                Grid.Row="1"
+                                FontSize="25"
+                                >
+                                Сведения о курсах:
+                            </Label>
+                            <Label
+                                Grid.Column="5"
+                                Grid.Row="1"
+                                FontSize="25"
+                                >
+                                Сведения о занятиях:
+                            </Label>
+                            <!--<StackPanel
+                                Grid.Row="1" Grid.RowSpan="1"
+                                  Grid.Column="0" Grid.ColumnSpan="1"         
+                                >
+                                <Label 
+                                    FontSize="25"
+                                    HorizontalAlignment="Center"
+                                    >Курсы обучения за выбранный период:</Label>
+                                
+                            </StackPanel>-->
+                            <DataGrid Grid.Row="2" 
+                                      Grid.RowSpan="2"
+                                  Grid.Column="0"        
+                                          ScrollViewer.CanContentScroll="True" 
+                                          ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                          ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                  ItemsSource="{Binding admin_report_courses}"
+                      
+                                  AutoGenerateColumns="False"
+                                      FontSize="25"
+                                  IsReadOnly="True">
+                                <DataGrid.Columns>
+
+                                    <DataGridTextColumn Header="Дата начала" Binding="{Binding start_date ,Converter={StaticResource dateConverter}}"/>
+                                    <DataGridTextColumn Header="Дата окончания" Binding="{Binding end_time ,Converter={StaticResource dateConverter}}"/>
+
+                                    <!--<DataGridTextColumn Header="Тема" Binding="{Binding topic}"/>-->
+                                    <DataGridTextColumn Header="Цена" Binding="{Binding cost}"/>
+                                    <DataGridTextColumn Header="Кол-во студентов" Binding="{Binding registered_people}"/>
+
+                                    <DataGridTextColumn Header="Преподаватель" Binding="{Binding teacher_name}"/>
+                                    <DataGridTextColumn Header="Кол-во практики" Binding="{Binding driving_hours}"/>
+                                    <!--<DataGridTextColumn Header="Тип" Binding="{Binding lesson_type}"/>-->
+                                    <DataGridTextColumn Header="Кол-во лекций" Binding="{Binding lecture_hours}"/>
+
+                                    <!--<DataGridTextColumn Header="Время" Binding="{Binding Path=Title}" Width="1.5*" />
+<DataGridHyperlinkColumn Header="Инструктор" Binding="{Binding Path=Company}" Width="6*" />-->
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+                            <!--<StackPanel
+                                Grid.Row="1" Grid.RowSpan="1"
+                                  Grid.Column="4" Grid.ColumnSpan="1"         
+                                >
+                                <Label 
+                                    FontSize="25"
+                                    HorizontalAlignment="Center"
+                                    >Занятия за выбранный период:</Label>
+                                
+                            </StackPanel>-->
+
+                            <DataGrid Grid.Row="2" Grid.RowSpan="2"
+                            Grid.Column="5" Grid.ColumnSpan="1"         
+                            ItemsSource="{Binding admin_total_lessons_for_period}"
+                                    ScrollViewer.CanContentScroll="True" 
+ScrollViewer.VerticalScrollBarVisibility="Auto"
+ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                
+                            AutoGenerateColumns="False"
+                                FontSize="25"
+                            IsReadOnly="True">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Visibility="Collapsed" Header="id" Binding="{Binding id}"/>
+                                    <DataGridTextColumn Header="Время" Binding="{Binding date ,Converter={StaticResource dateConverter}}"/>
+                                    <DataGridTextColumn Header="Тема" Binding="{Binding topic}"/>
+                                    <DataGridTextColumn Header="Цена" Binding="{Binding cost}"/>
+                                    <DataGridTextColumn Header="ФИО" Binding="{Binding student_name}"/>
+                                    <DataGridTextColumn Header="ТС" Binding="{Binding car_name}"/>
+                                    <DataGridTextColumn Header="Оплата" Binding="{Binding payment_status}"/>
+
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+
+                            <ListBox
+                                Grid.Row="0" Grid.Column="5"
+                                >
+                                
+                                <!--<StackPanel
+                                        Grid.Column="4"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center" Width="737" Height="220"
+                                        
+                                        >-->
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label FontSize="25">Всего занятий проведено:</Label>
+                                        <Label FontSize="25" Content="{Binding admin_lessons_counter}"></Label>
+                                    </StackPanel>
+                                </ListBoxItem>
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label FontSize="25">Куплено курсов:</Label>
+                                        <Label FontSize="25" Content="{Binding admin_sold_courses}"></Label>
+                                    </StackPanel>
+                                </ListBoxItem>
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label FontSize="25">Общая выручка автошколы:</Label>
+                                        <Label FontSize="25" Content="{Binding admin_lessons_cost}"></Label>
+                                        <Label FontSize="25">₽</Label>
+                                    </StackPanel>
+                                </ListBoxItem>
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label FontSize="25">Выручка преподавателей:</Label>
+                                        <Label FontSize="25" Content="{Binding money_to_teachers}"></Label>
+                                        <Label FontSize="25">₽</Label>
+                                    </StackPanel>
+                                </ListBoxItem>
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label FontSize="25">Количество лекций:</Label>
+                                        <Label FontSize="25" Content="{Binding admin_lecture_counter}"></Label>
+                                        <Label FontSize="25"></Label>
+                                    </StackPanel>
+                                    </ListBoxItem>
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label FontSize="25">Количество занятий вождения:</Label>
+                                        <Label FontSize="25" Content="{Binding admin_drive_counter}"></Label>
+                                        <Label FontSize="25"></Label>
+                                    </StackPanel>
+                                    </ListBoxItem>
+                                <ListBoxItem>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Label FontSize="25">Всего студентов:</Label>
+                                        <Label FontSize="25" Content="{Binding admin_students_counter}"></Label>
+                                        <Label FontSize="25"></Label>
+                                    </StackPanel>
+                                  </ListBoxItem>
+
+
+                                <!--</StackPanel>-->
+                            </ListBox>
                         </Grid>
                     </TabItem>
 
-                    <TabItem Height="100">
+                    <!--<TabItem Height="100">
                         <TabItem.Header>
                             <StackPanel Width="auto" Height="auto">
                                 <materialDesign:PackIcon 
@@ -539,7 +980,7 @@ Praesent sed dui arcu. Vivamus porta auctor sagittis
                                 <ColumnDefinition  Width="2*"/>
                             </Grid.ColumnDefinitions>
                         </Grid>
-                    </TabItem>
+                    </TabItem>-->
                 </TabControl>
             </TabItem>
 

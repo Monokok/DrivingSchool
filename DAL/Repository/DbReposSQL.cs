@@ -19,6 +19,8 @@ namespace DAL.Repository
         private CourseRepositorySQL CourseRepository;
         private CategoryRepositorySQL CategoryRepository;
         private invite_courseRepositorySQL InviteRepository;
+        private lesson_typeRepositorySQL LessonTypesRepository;
+        private carRepositorySQL CarRepository;
 
 
 
@@ -101,6 +103,24 @@ namespace DAL.Repository
             }
         }
 
+        public IRepository<lesson_type> LessonTypes
+        {
+            get
+            {
+                if (LessonTypesRepository == null)
+                    LessonTypesRepository = new lesson_typeRepositorySQL(db);
+                return LessonTypesRepository;
+            }
+        }
+        public IRepository<car> Cars
+        {
+            get
+            {
+                if (CarRepository == null)
+                    CarRepository = new carRepositorySQL(db);
+                return CarRepository;
+            }
+        }
         public int Save()
         {
             return db.SaveChanges();

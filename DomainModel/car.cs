@@ -17,6 +17,8 @@ namespace DomainModel
 
         [StringLength(50)]
         public string model { get; set; }
+        [StringLength(50)]
+        public string car_type { get; set; }
 
         [StringLength(8)]
         public string number { get; set; }

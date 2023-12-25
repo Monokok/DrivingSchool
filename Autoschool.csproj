@@ -104,6 +104,7 @@
     <Compile Include="Utils\NinjectModules\VMModule.cs" />
     <Compile Include="ViewModel\AppMainViewModel.cs" />
     <Compile Include="ViewModel\BaseViewModel.cs" />
+    <Compile Include="ViewModel\DateConverter.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="View\AppMainWindow.xaml.cs">
       <DependentUpon>AppMainWindow.xaml</DependentUpon>

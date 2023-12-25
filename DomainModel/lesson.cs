@@ -22,6 +22,7 @@ namespace DomainModel
         public int teacher_id { get; set; }
 
         public int student_id { get; set; }
+        public int car_id { get; set; }
 
         public int payment_type_id { get; set; }
 

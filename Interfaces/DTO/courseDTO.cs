@@ -21,14 +21,17 @@ namespace Interfaces.DTO
             lecture_hours= course.lecture_hours;
             driving_hours = course.driving_hours;
             teacher_id = course.teacher_id;
-            student_count = course.student_count;
+            student_count = course.student_count;//максимальное число зарегестрированных людей на курс - потенциальная функция на будущее
             driving_hours_string = driving_hours + " часов практики";
             lecture_hours_string = lecture_hours + " часов теории";
             cost_string = "Цена:" + " " + cost.ToString() + " " + "₽";
-            
+
+            registered_people = 0;//счётчик зарегестрированных на курс людей
+
         }
         public string category_teacher {  get; set; }
         public int id { get; set; }
+        public int registered_people { get; set; }
 
         public int category_id { get; set; }
 
@@ -52,6 +55,8 @@ namespace Interfaces.DTO
 
         public string teacher_name { get; set;}
         public string category_name { get; set; }
+        public string category_fullname { get; set; }
+
 
         public string driving_hours_string { get; set; }
         public string lecture_hours_string { get; set; }
